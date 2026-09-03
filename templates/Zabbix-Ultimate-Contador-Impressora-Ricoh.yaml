@@ -1,0 +1,1880 @@
+zabbix_export:
+  version: '7.0'
+  template_groups:
+    - uuid: fd2ea8ed858e428391aa62b3d4cdd786
+      name: 'CONTADOR IMPRESSORA RICOH'
+    - uuid: 4173303ba7c748e09aa9a21bd57ed848
+      name: Template/Printes
+  templates:
+    - uuid: 07b82104fd8f4d19b58977330e7c4a99
+      template: Zabbix_Ultimate_Contador_De_Paginas_Impressora_Ricoh
+      name: Zabbix_Ultimate_Contador_De_Paginas_Impressora_Ricoh
+      groups:
+        - name: 'CONTADOR IMPRESSORA RICOH'
+      items:
+        - uuid: d73789c91b1b4bd7bbf3e8ee5a7e2977
+          name: 'Contador de Paginas Impressas 1cor (Duplex) Por Hora'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.367.3.2.1.2.19.5.1.9.158
+          key: hora_cor1_duplex
+          delay: 60m
+          history: 90d
+          units: paginas
+          tags:
+            - tag: CONTADOR
+              value: PAGINAS
+        - uuid: 08117128b6144b17b4741740950942e3
+          name: 'Contador de Paginas Impressas 1cor  Por Hora'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.367.3.2.1.2.19.5.1.9.156
+          key: hora_cor1_simples
+          delay: 60m
+          history: 90d
+          units: paginas
+          tags:
+            - tag: CONTADOR
+              value: PAGINAS
+        - uuid: a86f301c9d4f4348a13bb0f476221e8f
+          name: 'Contador de Paginas Impressas 2 Cores (Duplex) Por Hora'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.367.3.2.1.2.19.5.1.9.162
+          key: hora_cor2_duplex
+          delay: 60m
+          history: 90d
+          units: paginas
+          tags:
+            - tag: CONTADOR
+              value: PAGINAS
+        - uuid: 286e4c3341c54185a5ede8b19852fa91
+          name: 'Contador de Paginas Impressas 2 Cores Por Hora'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.367.3.2.1.2.19.5.1.9.160
+          key: hora_cor2_simples
+          delay: 60m
+          history: 90d
+          units: paginas
+          tags:
+            - tag: CONTADOR
+              value: PAGINAS
+        - uuid: 73ed5aa92b594089b2dc52d08da23513
+          name: 'Contador de Paginas Impressas 4 cores (Duplex)  Por Hora'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.367.3.2.1.2.19.5.1.9.150
+          key: hora_cor4_duplex
+          delay: 60m
+          history: 90d
+          units: paginas
+          tags:
+            - tag: CONTADOR
+              value: PAGINAS
+        - uuid: 8fb503f1e60742fb9cb0be1d9407b6a3
+          name: 'Contador de Paginas Impressas 4 cores Por hora'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.367.3.2.1.2.19.5.1.9.148
+          key: hora_cor4_simples
+          delay: 60m
+          history: 90d
+          units: paginas
+          tags:
+            - tag: CONTADOR
+              value: PAGINAS
+        - uuid: edded1f0899346268633abf6ee1e2556
+          name: 'Contador de Paginas Impressas branco e preto (Duplex) Por Hora'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.367.3.2.1.2.19.5.1.9.154
+          key: hora_preto_duplex
+          delay: 60m
+          history: 90d
+          units: paginas
+          tags:
+            - tag: CONTADOR
+              value: PAGINAS
+        - uuid: ea3142e242ef427b9f39a0906ccb7dcd
+          name: 'Contador de Paginas Impressas branco e preto Por Hora'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.367.3.2.1.2.19.5.1.9.292
+          key: hora_preto_simples
+          delay: 60m
+          history: 90d
+          units: paginas
+          tags:
+            - tag: CONTADOR
+              value: PAGINAS
+        - uuid: 48fa15e119ee4c2ab4f92b5956bad40a
+          name: 'Contador de Paginas Impressas 1cor (Duplex) Por DIA'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.367.3.2.1.2.19.5.1.9.158
+          key: noite_cor1_duplex
+          delay: 0m;h00m02
+          history: 90d
+          units: paginas
+          description: 'Coleta agendada as 00:02hs todos os dias.'
+          tags:
+            - tag: CONTADOR
+              value: PAGINAS
+        - uuid: c62691a43203422aad7b3b54bdfa5cee
+          name: 'Contador de Paginas Impressas 1cor  Por DIA'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.367.3.2.1.2.19.5.1.9.156
+          key: noite_cor1_simples
+          delay: 0m;h00m02
+          history: 90d
+          units: paginas
+          description: 'Coleta agendada as 00:02hs todos os dias.'
+          tags:
+            - tag: CONTADOR
+              value: PAGINAS
+        - uuid: fae710c112ed4ebfb933b5bb6e1eeff5
+          name: 'Contador de Paginas Impressas 2 Cores (Duplex) Por DIA'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.367.3.2.1.2.19.5.1.9.162
+          key: noite_cor2_duplex
+          delay: 0m;h00m02
+          history: 90d
+          units: paginas
+          description: 'Coleta agendada as 00:02hs todos os dias.'
+          tags:
+            - tag: CONTADOR
+              value: PAGINAS
+        - uuid: 1d2aac1cc3d54fdcb5222a798bfc0b1d
+          name: 'Contador de Paginas Impressas 2 Cores Por DIA'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.367.3.2.1.2.19.5.1.9.160
+          key: noite_cor2_simples
+          delay: 0m;h00m02
+          history: 90d
+          units: paginas
+          description: 'Coleta agendada as 00:02hs todos os dias.'
+          tags:
+            - tag: CONTADOR
+              value: PAGINAS
+        - uuid: ac790f1e16fc4ee0958cd6ac5ed3a4e8
+          name: 'Contador de Paginas Impressas 4 cores (Duplex)  Por DIA'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.367.3.2.1.2.19.5.1.9.150
+          key: noite_cor4_duplex
+          delay: 0;h00m02
+          history: 90d
+          units: paginas
+          description: 'Coleta agendada as 00:02hs todos os dias.'
+          tags:
+            - tag: CONTADOR
+              value: PAGINAS
+        - uuid: c695f28357da4e98a4a2b6ee5157c0d6
+          name: 'Contador de Paginas Impressas 4 cores  Por dia'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.367.3.2.1.2.19.5.1.9.148
+          key: noite_cor4_simples
+          delay: 0;h00m02
+          history: 90d
+          units: paginas
+          description: 'Coleta agendada as 00:02hs todos os dias.'
+          tags:
+            - tag: CONTADOR
+              value: PAGINAS
+        - uuid: 8db3ed18a86448b9942262e89575b7e8
+          name: 'Contador de Paginas Impressas branco e preto (Duplex) Por DIA'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.367.3.2.1.2.19.5.1.9.154
+          key: noite_preto_duplex
+          delay: 0;h00m02
+          history: 90d
+          units: paginas
+          description: 'Coleta agendada as 00:02hs todos os dias.'
+          tags:
+            - tag: CONTADOR
+              value: PAGINAS
+        - uuid: bf1dce5d628340b0826e353ce9a130cd
+          name: 'Contador de Paginas Impressas branco e preto Por DIA'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.367.3.2.1.2.19.5.1.9.292
+          key: noite_preto_simples
+          delay: 0;h00m02
+          history: 90d
+          units: paginas
+          description: 'Coleta agendada as 00:02hs todos os dias.'
+          tags:
+            - tag: CONTADOR
+              value: PAGINAS
+    - uuid: f59ec15677c5428ab0ea0f9ce1e9369f
+      template: Zabbix_Ultimate_Template_Contador_De_Paginas
+      name: Zabbix_Ultimate_Template_Contador_De_Paginas
+      groups:
+        - name: Template/Printes
+      items:
+        - uuid: cf69e33cd81f49e0b5a541fb0411494b
+          name: 'Contador de Paginas Impressas Por Dia'
+          type: CALCULATED
+          key: contador_impressoes_dia
+          delay: 0;h00m02
+          history: 60d
+          trends: 90d
+          units: Paginas
+          params: last(//prtMarkerLifeCount.1.1)
+          description: 'Coleta agendada as 00:02hs todos os dias.'
+          tags:
+            - tag: Application
+              value: 'Informacoes de Paginas Impressas por dia'
+        - uuid: 86ef99e14df64fc8b3ede904d417f75d
+          name: 'Contador de Paginas Impressas Por Mes'
+          type: CALCULATED
+          key: contador_impressoes_mes
+          delay: 0;md1h00m04
+          history: 60d
+          trends: 90d
+          units: Paginas
+          params: last(//prtMarkerLifeCount.1.1)
+          description: 'Coleta agendada as 00:04hs todo dia 1º de cada mês, conta o total das páginas impressas desde a última coleta total do mês.'
+          tags:
+            - tag: Application
+              value: 'Informacoes de Paginas Impressas mes'
+        - uuid: c50e2c9fba9a4d5dbb056bb08b6c2b52
+          name: 'Contador de Paginas Impressas Por Semana'
+          type: CALCULATED
+          key: contador_impressoes_semana
+          delay: 0;wd1h00m03
+          history: 60d
+          trends: 90d
+          units: Paginas
+          params: last(//prtMarkerLifeCount.1.1)
+          description: 'Coleta agendada as 00:03hs toda segunda feira de cada semana, conta o total das páginas impressas desde a última coleta total da semana.'
+          tags:
+            - tag: Application
+              value: 'Informacoes de Paginas Impressas Por Semana'
+        - uuid: c12c1f1470a74015b6e6e6d1e0037165
+          name: Ping
+          type: SIMPLE
+          key: icmpping
+          delay: '0;60/1-5,08:00-18:00'
+          history: 7d
+          value_type: FLOAT
+          tags:
+            - tag: Application
+              value: 'Informacoes de Disponibilidade do Equipamento'
+          triggers:
+            - uuid: b1fcf120808d4d61be5ca8fc89d7570d
+              expression: 'max(/Zabbix_Ultimate_Template_Contador_De_Paginas/icmpping,#3)=0'
+              name: 'A {HOST.NAME} nao Responde a Ping'
+              status: DISABLED
+              priority: HIGH
+        - uuid: ca0790979a274c6785d1632fb7380006
+          name: 'Ping Perdido'
+          type: SIMPLE
+          key: icmppingloss
+          delay: '60'
+          history: 7d
+          value_type: FLOAT
+          units: '%'
+          tags:
+            - tag: Application
+              value: 'Informacoes de Disponibilidade do Equipamento'
+          triggers:
+            - uuid: d9be9b32d0014709bce30a6a35fab251
+              expression: 'min(/Zabbix_Ultimate_Template_Contador_De_Paginas/icmppingloss,5m)>20'
+              name: 'A perda de ping está muito alta {HOST.NAME}'
+              status: DISABLED
+              priority: WARNING
+              dependencies:
+                - name: 'A {HOST.NAME} nao Responde a Ping'
+                  expression: 'max(/Zabbix_Ultimate_Template_Contador_De_Paginas/icmpping,#3)=0'
+        - uuid: bbb80a5de95448b3bb95ea4b6873d883
+          name: 'Ping por Segundo'
+          type: SIMPLE
+          key: icmppingsec
+          delay: '60'
+          history: 7d
+          value_type: FLOAT
+          units: s
+          tags:
+            - tag: Application
+              value: 'Informacoes de Disponibilidade do Equipamento'
+          triggers:
+            - uuid: 179d3f34c92c4647bfc4a26722d86258
+              expression: 'avg(/Zabbix_Ultimate_Template_Contador_De_Paginas/icmppingsec,5m)>0.15'
+              name: 'O tempo de resposta é muito alta na Impressora {HOST.NAME}'
+              status: DISABLED
+              priority: WARNING
+              dependencies:
+                - name: 'A {HOST.NAME} nao Responde a Ping'
+                  expression: 'max(/Zabbix_Ultimate_Template_Contador_De_Paginas/icmpping,#3)=0'
+        - uuid: 4771273330ca4e9ca9460e6f850514b3
+          name: 'Paginas Impressas Por Dia'
+          type: CALCULATED
+          key: impressoes_mes
+          delay: '3600'
+          history: 60d
+          trends: 90d
+          units: Paginas
+          params: last(//prtMarkerLifeCount.1.1)-last(//contador_impressoes_dia)
+          description: 'Coleta o total de impressões hoje.'
+          tags:
+            - tag: Application
+              value: 'Informacoes de Paginas Impressas por dia'
+        - uuid: c2967d69c9d74bb2827a601c42362d45
+          name: 'Paginas Impressas Por Mes'
+          type: CALCULATED
+          key: impressoes_mes_01
+          delay: '3600'
+          history: 60d
+          trends: 90d
+          status: DISABLED
+          units: Paginas
+          params: last(//prtMarkerLifeCount.1.1)-last(//contador_impressoes_mes)
+          description: 'Coleta o total de impressões no mês.'
+          tags:
+            - tag: Application
+              value: 'Informacoes de Paginas Impressas mes'
+        - uuid: 4f7edb6eb98e43a9a960a4686dd0ccad
+          name: 'Paginas Impressas Total'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.2.1.43.10.2.1.4.1.1
+          key: impressoes_mes_02
+          delay: '3600'
+          history: 60d
+          trends: 90d
+          units: Paginas
+          tags:
+            - tag: Application
+              value: 'Informacoes de Paginas Impressas'
+        - uuid: 41275bb995f94be884f758cd06de6bcd
+          name: 'Paginas Impressas Por Semana'
+          type: CALCULATED
+          key: impressoes_semana
+          delay: '600'
+          history: 60d
+          trends: 90d
+          units: Paginas
+          params: last(//prtMarkerLifeCount.1.1)-last(//contador_impressoes_semana)
+          description: 'Coleta o total de impressões esta semana.'
+          tags:
+            - tag: Application
+              value: 'Informacoes de Paginas Impressas Por Semana'
+        - uuid: 5f97543130ff4b8592f99373e03668d9
+          name: 'Preco Resmas Utilizadas Por Mes'
+          type: CALCULATED
+          key: preco_resmas_usadas_por_mes
+          delay: '600'
+          history: 60d
+          trends: 90d
+          params: 'last(//resmas_usadas_por_mes)*20.00'
+          description: 'Coleta o total de resmas utilizadas no mês.'
+          tags:
+            - tag: Application
+              value: 'Informacoes de Custo mensal'
+        - uuid: b962d667cc874dc7882361698e8e5a0f
+          name: 'Resmas Utilizadas Por Mes'
+          type: CALCULATED
+          key: resmas_usadas_por_mes
+          delay: '600'
+          history: 60d
+          trends: 90d
+          units: Resmas
+          params: last(//impressoes_mes)/500
+          description: 'Coleta o total de resmas utilizadas no mês.'
+          tags:
+            - tag: Application
+              value: 'Informacoes de Custo mensal'
+        - uuid: 66883baed4ae4dfe88a911feaca41077
+          name: 'Tempo Ligado do Equipamento'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.2.1.1.3.0
+          key: sysUpTimeInstance
+          delay: '3600'
+          history: 7d
+          units: uptime
+          preprocessing:
+            - type: MULTIPLIER
+              parameters:
+                - '0.01'
+          tags:
+            - tag: Application
+              value: 'Informacoes de Disponibilidade do Equipamento'
+          triggers:
+            - uuid: d28d7be753d24d99aaa4e1490933f6e2
+              expression: last(/Zabbix_Ultimate_Template_Contador_De_Paginas/sysUpTimeInstance)<600
+              name: 'A Impressora {HOST.NAME} Foi Reiniciada'
+              status: DISABLED
+              priority: INFO
+              dependencies:
+                - name: 'A {HOST.NAME} nao Responde a Ping'
+                  expression: 'max(/Zabbix_Ultimate_Template_Contador_De_Paginas/icmpping,#3)=0'
+        - uuid: 5ca842afad714105bf29cc58eb10a3fb
+          name: 'Custo Total ao Mes'
+          type: CALCULATED
+          key: valor_impressoes_mes
+          delay: '600'
+          history: 60d
+          value_type: FLOAT
+          trends: 90d
+          units: R$
+          params: 'last(//impressoes_mes)*0.22'
+          description: 'Coleta o total de impressões no mês.'
+          tags:
+            - tag: Application
+              value: 'Informacoes de Custo mensal'
+      discovery_rules:
+        - uuid: 29a9a4ef3dac476da535a36763dff574
+          name: 'Descoberta LLD Descricao do Hardware'
+          type: SNMP_AGENT
+          snmp_oid: 'discovery[{#SNMPVALUE},.1.3.6.1.2.1.25.3.2.1.3]'
+          key: hrDeviceDescr
+          delay: '86400'
+          lifetime_type: DELETE_IMMEDIATELY
+          lifetime: '0'
+          item_prototypes:
+            - uuid: c80f98ada8ed449a9381f19e50fd7449
+              name: 'Descricao do Equipamento'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.2.1.25.3.2.1.3.{#SNMPINDEX}'
+              key: 'hrDeviceDescr[{#SNMPVALUE}]'
+              delay: '900'
+              history: 7d
+              value_type: CHAR
+              trends: '0'
+              tags:
+                - tag: Application
+                  value: 'Informacoes do Equipamento'
+            - uuid: d0c5cd6931744f9f995e000ff6a0e277
+              name: 'Status de Erro do Dispositivos No Equipamento'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.2.1.25.3.2.1.6.{#SNMPINDEX}'
+              key: 'hrDeviceErrors[{#SNMPVALUE}]'
+              delay: '600'
+              history: 7d
+              value_type: CHAR
+              trends: '0'
+              tags:
+                - tag: Application
+                  value: 'Informacoes de Erros no Dispositivo Anexado'
+            - uuid: 40a0665ca1fa4f92bc172a4827f00406
+              name: 'Descricao do Tipo de Dispositivos Equipamento Identificacao'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.2.1.25.3.2.1.4.{#SNMPINDEX}'
+              key: 'hrDeviceID[{#SNMPVALUE}]'
+              delay: '600'
+              history: 7d
+              value_type: CHAR
+              trends: '0'
+              tags:
+                - tag: Application
+                  value: 'Informacoes de identificacao do Dispositivo'
+            - uuid: a086b2ec063644b7bc7c96932d219ff9
+              name: 'Dispositivos Anexados'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.2.1.25.3.2.1.1.{#SNMPINDEX}'
+              key: 'hrDeviceIndex[{#SNMPVALUE}]'
+              delay: '600'
+              history: 7d
+              value_type: CHAR
+              trends: '0'
+              tags:
+                - tag: Application
+                  value: 'Informacoes de Dispositivos Anexados'
+            - uuid: 9093bab30e0f4ab59e775c448ad00236
+              name: 'Status do Dispositivos No Equipamento'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.2.1.25.3.2.1.5.{#SNMPINDEX}'
+              key: 'hrDeviceStatus[{#SNMPVALUE}]'
+              delay: '600'
+              history: 7d
+              value_type: CHAR
+              trends: '0'
+              tags:
+                - tag: Application
+                  value: 'Informacoes de Status do Dispositivo Anexado'
+            - uuid: fab0226618ba405cb2a2573428df205b
+              name: 'Descricao do Tipo de Dispositivos Equipamento'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.2.1.25.3.2.1.2.{#SNMPINDEX}'
+              key: 'hrDeviceType[{#SNMPVALUE}]'
+              delay: '600'
+              history: 7d
+              value_type: CHAR
+              trends: '0'
+              tags:
+                - tag: Application
+                  value: 'Informacoes Tipos de Dispositivos Anexados'
+        - uuid: 3f5af099f9d2414c9113d325e22f86cc
+          name: 'Descoberta LLD Rede'
+          type: SNMP_AGENT
+          snmp_oid: 'discovery[{#SNMPVALUE},.1.3.6.1.2.1.2.2.1.2]'
+          key: ifDescr
+          delay: '86400'
+          lifetime: 1d
+          enabled_lifetime_type: DISABLE_NEVER
+          item_prototypes:
+            - uuid: fca5fef87d044dfa85814c9a7627a597
+              name: 'Status administrativo da Inteface $1'
+              type: SNMP_AGENT
+              snmp_oid: 'IF-MIB::ifAdminStatus.{#SNMPINDEX}'
+              key: 'ifAdminStatus[{#SNMPVALUE}]'
+              delay: '600'
+              history: 7d
+              valuemap:
+                name: 'SNMP interface status (ifAdminStatus)'
+              tags:
+                - tag: Application
+                  value: 'Informacoes de Status da Placa de Rede'
+            - uuid: 628317b50f74455e87576d04770666d1
+              name: 'Descricao da Placa de Rede $1'
+              type: SNMP_AGENT
+              snmp_oid: 'IF-MIB::ifDescr.{#SNMPINDEX}'
+              key: 'ifDescr[{#SNMPVALUE}]'
+              delay: '600'
+              history: 7d
+              value_type: CHAR
+              trends: '0'
+              tags:
+                - tag: Application
+                  value: 'Informacoes de Rede do Equipamento'
+            - uuid: 65da6cc56ea046c8b09f42db06cf7a6d
+              name: 'Trafego de Entrada Porta $1'
+              type: SNMP_AGENT
+              snmp_oid: 'IF-MIB::ifInOctets.{#SNMPINDEX}'
+              key: 'ifInOctets[{#SNMPVALUE}]'
+              delay: '600'
+              history: 90d
+              units: bps
+              preprocessing:
+                - type: CHANGE_PER_SECOND
+                  parameters:
+                    - ''
+                - type: MULTIPLIER
+                  parameters:
+                    - '8'
+              tags:
+                - tag: Application
+                  value: 'Informacoes de Trafego de Entrada'
+            - uuid: d17d68e3fba146708088f1d5a5b3c981
+              name: 'Trafego de Saida Porta $1'
+              type: SNMP_AGENT
+              snmp_oid: 'IF-MIB::ifOutOctets.{#SNMPINDEX}'
+              key: 'ifOutOctets[{#SNMPVALUE}]'
+              delay: '600'
+              history: 90d
+              units: bps
+              preprocessing:
+                - type: CHANGE_PER_SECOND
+                  parameters:
+                    - ''
+                - type: MULTIPLIER
+                  parameters:
+                    - '8'
+              tags:
+                - tag: Application
+                  value: 'Informacoes de Trafego de Saida'
+        - uuid: 830448493c41479d80192b49886e72dc
+          name: 'Descoberta LLD Nivel de Papel MP 1'
+          type: SNMP_AGENT
+          snmp_oid: 'discovery[{#SNMPVALUE},.1.3.6.1.2.1.43.8.2.1.18.1]'
+          key: prtInputDescriptionMp1
+          delay: '60'
+          filter:
+            conditions:
+              - macro: '{#SNMPVALUE}'
+                value: ^MP
+                formulaid: A
+          lifetime_type: DELETE_IMMEDIATELY
+          lifetime: '0'
+          item_prototypes:
+            - uuid: fbdf9028199e4fca8c12565f0732c5e4
+              name: 'Nivel de Papel na Bandeja $1 (Porcentagem)'
+              type: CALCULATED
+              key: 'niveldepapelMP[{#SNMPVALUE}]'
+              delay: '900'
+              history: 7d
+              value_type: FLOAT
+              units: '%'
+              params: '100*last(//prtInputCurrentLevelMP[{#SNMPVALUE}])/last(//prtInputMaxCapacityMP[{#SNMPVALUE}])'
+              tags:
+                - tag: Application
+                  value: 'Informacoes da Bandeja MP da Impressora'
+            - uuid: a66c617f085341d79e57b712e3e2089a
+              name: 'Nivel de Papel da Bandeja $1'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.2.1.43.8.2.1.10.1.{#SNMPINDEX}'
+              key: 'prtInputCurrentLevelMP[{#SNMPVALUE}]'
+              delay: '600'
+              history: 7d
+              value_type: FLOAT
+              tags:
+                - tag: Application
+                  value: 'Informacoes da Bandeja MP da Impressora'
+            - uuid: cd941a0cc5c64208aa061db65ee4209b
+              name: 'Descricao da Bandeja MP 1'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.2.1.43.8.2.1.18.1.{#SNMPINDEX}'
+              key: 'prtInputDescriptionMP1[{#SNMPVALUE}]'
+              delay: '600'
+              history: 7d
+              value_type: CHAR
+              trends: '0'
+              tags:
+                - tag: Application
+                  value: 'Informacoes da Bandeja MP da Impressora'
+            - uuid: da4c88f7391b4376a3544fbb7951f51e
+              name: 'Maxima Capacidade da Bandeja $1'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.2.1.43.8.2.1.9.1.{#SNMPINDEX}'
+              key: 'prtInputMaxCapacityMP[{#SNMPVALUE}]'
+              delay: '600'
+              history: 7d
+              tags:
+                - tag: Application
+                  value: 'Informacoes da Bandeja MP da Impressora'
+          graph_prototypes:
+            - uuid: a0cce4d4444b44799e043896362a6cd5
+              name: '10- Nivel de Papel Na Bandeja {#SNMPVALUE}'
+              graph_items:
+                - drawtype: FILLED_REGION
+                  color: FFFFFF
+                  item:
+                    host: Zabbix_Ultimate_Template_Contador_De_Paginas
+                    key: 'niveldepapelMP[{#SNMPVALUE}]'
+        - uuid: bd351fc8750849c5bfe84edc000b554e
+          name: 'Descoberta LLD Nivel de Papel Tray 1'
+          type: SNMP_AGENT
+          snmp_oid: 'discovery[{#SNMPVALUE},.1.3.6.1.2.1.43.8.2.1.18.1]'
+          key: prtInputDescriptionTray1
+          delay: '60'
+          filter:
+            conditions:
+              - macro: '{#SNMPVALUE}'
+                value: '^Tray 1$'
+                formulaid: A
+          lifetime_type: DELETE_IMMEDIATELY
+          lifetime: '0'
+          item_prototypes:
+            - uuid: 807fc6d62bd4411db15f70e0f880bca5
+              name: 'Nivel de Papel na Bandeja $1 (Porcentagem)'
+              type: CALCULATED
+              key: 'niveldepapelTray1[{#SNMPVALUE}]'
+              delay: '900'
+              history: 7d
+              value_type: FLOAT
+              units: '%'
+              params: '100*last(//prtInputCurrentLevelTray1[{#SNMPVALUE}])/last(//prtInputMaxCapacityTray1[{#SNMPVALUE}])'
+              tags:
+                - tag: Application
+                  value: 'Informacoes da Bandeja da Impressora'
+              trigger_prototypes:
+                - uuid: 1edbfd4fc21649e0a1647c6a3a4219eb
+                  expression: 'last(/Zabbix_Ultimate_Template_Contador_De_Paginas/niveldepapelTray1[{#SNMPVALUE}])<2'
+                  name: 'Abastecimento de Papel A4 Necessario em {ITEM.VALUE} Na {HOSTNAME}'
+                  status: DISABLED
+                  priority: HIGH
+                  manual_close: 'YES'
+                - uuid: 8841a2d3cdba43039d0bbd65b0c7acc3
+                  expression: 'last(/Zabbix_Ultimate_Template_Contador_De_Paginas/niveldepapelTray1[{#SNMPVALUE}])=3'
+                  name: 'Nivel de Papel A4 Acabando Abaixo de {ITEM.VALUE}  {HOSTNAME}'
+                  status: DISABLED
+                  priority: WARNING
+                  manual_close: 'YES'
+                - uuid: 19ab4df49db84ed897540ee8e76dce27
+                  expression: 'last(/Zabbix_Ultimate_Template_Contador_De_Paginas/niveldepapelTray1[{#SNMPVALUE}])=4'
+                  name: 'Nivel de Papel A4 Acabando Abaixo de {ITEM.VALUE}  {HOSTNAME}'
+                  status: DISABLED
+                  priority: WARNING
+                  manual_close: 'YES'
+                - uuid: cfe0910ba1b64b3d96b77d4227ded77a
+                  expression: 'last(/Zabbix_Ultimate_Template_Contador_De_Paginas/niveldepapelTray1[{#SNMPVALUE}])=5'
+                  name: 'Nivel de Papel A4 Acabando Abaixo de {ITEM.VALUE}  {HOSTNAME}'
+                  status: DISABLED
+                  priority: WARNING
+                  manual_close: 'YES'
+            - uuid: b6f5f5da8f564a66b4f9bb4d962a8eeb
+              name: 'Nivel de Papel da Bandeja $1'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.2.1.43.8.2.1.10.1.{#SNMPINDEX}'
+              key: 'prtInputCurrentLevelTray1[{#SNMPVALUE}]'
+              delay: '600'
+              history: 7d
+              value_type: FLOAT
+              trends: '0'
+              tags:
+                - tag: Application
+                  value: 'Informacoes da Bandeja da Impressora'
+            - uuid: 5269c2a344864eac95d9ac41e537f199
+              name: 'Descricao da Bandeja Tray 1'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.2.1.43.8.2.1.18.1.{#SNMPINDEX}'
+              key: 'prtInputDescription[{#SNMPVALUE}]'
+              delay: '600'
+              history: 7d
+              value_type: CHAR
+              trends: '0'
+              tags:
+                - tag: Application
+                  value: 'Informacoes da Bandeja da Impressora'
+            - uuid: 223e47ff951c4ca79eb5d5246897f8f6
+              name: 'Maxima Capacidade da Bandeja $1'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.2.1.43.8.2.1.9.1.{#SNMPINDEX}'
+              key: 'prtInputMaxCapacityTray1[{#SNMPVALUE}]'
+              delay: '600'
+              history: 7d
+              tags:
+                - tag: Application
+                  value: 'Informacoes da Bandeja da Impressora'
+          graph_prototypes:
+            - uuid: 02c2c7fa2dc045dc9ab315894ff58d8b
+              name: '11- Nivel de Papel Na Bandeja {#SNMPVALUE}'
+              graph_items:
+                - drawtype: FILLED_REGION
+                  color: FFFFFF
+                  item:
+                    host: Zabbix_Ultimate_Template_Contador_De_Paginas
+                    key: 'niveldepapelTray1[{#SNMPVALUE}]'
+        - uuid: 0fa90e458be4403cb90da04490ba79b8
+          name: 'Descoberta LLD Nivel de Papel Tray 2'
+          type: SNMP_AGENT
+          snmp_oid: 'discovery[{#SNMPVALUE},.1.3.6.1.2.1.43.8.2.1.18.1]'
+          key: prtInputDescriptionTray2
+          delay: '60'
+          filter:
+            conditions:
+              - macro: '{#SNMPVALUE}'
+                value: '^Tray 2$'
+                formulaid: A
+          lifetime_type: DELETE_IMMEDIATELY
+          lifetime: '0'
+          item_prototypes:
+            - uuid: b0e7b0b2e9824ad8b294421df69ecc2d
+              name: 'Nivel de Papel na Bandeja $1 (Porcentagem)'
+              type: CALCULATED
+              key: 'niveldepapelTray2[{#SNMPVALUE}]'
+              delay: '900'
+              history: 7d
+              value_type: FLOAT
+              units: '%'
+              params: '100*last(//prtInputCurrentLevelTray2[{#SNMPVALUE}])/last(//prtInputMaxCapacityTray2[{#SNMPVALUE}])'
+              tags:
+                - tag: Application
+                  value: 'Informacoes da Bandeja 2 da Impressora'
+              trigger_prototypes:
+                - uuid: 513e2a441bee4d4da70edff8eb117201
+                  expression: 'last(/Zabbix_Ultimate_Template_Contador_De_Paginas/niveldepapelTray2[{#SNMPVALUE}])<2'
+                  name: 'Abastecimento de Papel A4 Necessario em {ITEM.VALUE} Na {HOSTNAME}'
+                  status: DISABLED
+                  priority: HIGH
+                  manual_close: 'YES'
+                - uuid: d56a4be9507f42d48d576d5a831e8904
+                  expression: 'last(/Zabbix_Ultimate_Template_Contador_De_Paginas/niveldepapelTray2[{#SNMPVALUE}])=3'
+                  name: 'Nivel de Papel A4 Acabando Abaixo de {ITEM.VALUE}  Na {HOSTNAME}'
+                  status: DISABLED
+                  priority: WARNING
+                  manual_close: 'YES'
+                - uuid: 8ea4257d6bdb48b48e0323c95c66fa07
+                  expression: 'last(/Zabbix_Ultimate_Template_Contador_De_Paginas/niveldepapelTray2[{#SNMPVALUE}])=4'
+                  name: 'Nivel de Papel A4 Acabando Abaixo de {ITEM.VALUE}  Na {HOSTNAME}'
+                  status: DISABLED
+                  priority: WARNING
+                  manual_close: 'YES'
+                - uuid: 4d9844daa3b44c0bb3470a224ba2ccc4
+                  expression: 'last(/Zabbix_Ultimate_Template_Contador_De_Paginas/niveldepapelTray2[{#SNMPVALUE}])=5'
+                  name: 'Nivel de Papel A4 Acabando Abaixo de {ITEM.VALUE}  Na {HOSTNAME}'
+                  status: DISABLED
+                  priority: WARNING
+                  manual_close: 'YES'
+            - uuid: 4771489373d84ac1b6c2a04aa88b16d7
+              name: 'Nivel de Papel da Bandeja $1'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.2.1.43.8.2.1.10.1.{#SNMPINDEX}'
+              key: 'prtInputCurrentLevelTray2[{#SNMPVALUE}]'
+              delay: '600'
+              history: 7d
+              value_type: FLOAT
+              tags:
+                - tag: Application
+                  value: 'Informacoes da Bandeja 2 da Impressora'
+            - uuid: d65f1c193feb47e8b55afbeeede11190
+              name: 'Descricao da Bandeja 2'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.2.1.43.8.2.1.18.1.{#SNMPINDEX}'
+              key: 'prtInputDescriptionTray1[{#SNMPVALUE}]'
+              delay: '600'
+              history: 90d
+              value_type: CHAR
+              trends: '0'
+              tags:
+                - tag: Application
+                  value: 'Informacoes da Bandeja 2 da Impressora'
+            - uuid: 9ba9f4c0bd7a490798573c69a8125136
+              name: 'Maxima Capacidade da Bandeja $1'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.2.1.43.8.2.1.9.1.{#SNMPINDEX}'
+              key: 'prtInputMaxCapacityTray2[{#SNMPVALUE}]'
+              delay: '600'
+              history: 90d
+              tags:
+                - tag: Application
+                  value: 'Informacoes da Bandeja 2 da Impressora'
+          graph_prototypes:
+            - uuid: 0d4f41139b054e7fa41697d23e71dffa
+              name: '12- Nivel de Papel Na Bandeja {#SNMPVALUE}'
+              graph_items:
+                - drawtype: FILLED_REGION
+                  color: FFFFFF
+                  item:
+                    host: Zabbix_Ultimate_Template_Contador_De_Paginas
+                    key: 'niveldepapelTray2[{#SNMPVALUE}]'
+        - uuid: fc717e54bd524489bc6263045479d1d7
+          name: 'Descoberta LLD Fusor'
+          type: SNMP_AGENT
+          snmp_oid: 'discovery[{#SNMPVALUE},.1.3.6.1.2.1.43.11.1.1.6.1]'
+          key: prtMarkerFusorDescription
+          delay: '60'
+          filter:
+            conditions:
+              - macro: '{#SNMPVALUE}'
+                value: Fuser
+                formulaid: A
+          lifetime_type: DELETE_IMMEDIATELY
+          lifetime: '0'
+          item_prototypes:
+            - uuid: 4623f455208d4c508996d570ab86faa0
+              name: 'Maxima Capacidade do Fusor $1'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.2.1.43.11.1.1.8.1.{#SNMPINDEX}'
+              key: 'prtMarkerFusorCapacity[{#SNMPVALUE}]'
+              delay: '600'
+              history: 7d
+              tags:
+                - tag: Application
+                  value: 'Informacoes do Fusor da Impressora'
+            - uuid: 0e4d938d4394416e9a6bd26640eced6c
+              name: 'Descricao do Fusor'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.2.1.43.11.1.1.6.1.{#SNMPINDEX}'
+              key: 'prtMarkerFusorDescription[{#SNMPVALUE}]'
+              delay: '600'
+              history: 7d
+              value_type: CHAR
+              trends: '0'
+              tags:
+                - tag: Application
+                  value: 'Informacoes do Fusor da Impressora'
+            - uuid: 6679769927564422ba06f304916cff74
+              name: 'Nivel de Capacidade do Fusor'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.2.1.43.11.1.1.9.1.{#SNMPINDEX}'
+              key: 'prtMarkerFusorLevel[{#SNMPVALUE}]'
+              delay: '600'
+              history: 90d
+              tags:
+                - tag: Application
+                  value: 'Informacoes do Fusor da Impressora'
+            - uuid: 26506953557e4b5680e1d79a0b02142a
+              name: 'Tempo de Vida do Fusor ( Impressoes)'
+              type: CALCULATED
+              key: 'vidafusorImpressoes[{#SNMPVALUE}]'
+              delay: '600'
+              history: 7d
+              params: 'last(//prtMarkerFusorCapacity[{#SNMPVALUE}])-last(//prtMarkerFusorLevel[{#SNMPVALUE}])'
+              tags:
+                - tag: Application
+                  value: 'Informacoes do Fusor da Impressora'
+            - uuid: 600e092c7c6a468da35ecb059c060fa6
+              name: 'Tempo de Vida Restante no Fusor'
+              type: CALCULATED
+              key: 'vidafusor[{#SNMPVALUE}]'
+              delay: '600'
+              history: 7d
+              units: '%'
+              params: '100*last(//prtMarkerFusorLevel[{#SNMPVALUE}])/last(//prtMarkerFusorCapacity[{#SNMPVALUE}])'
+              tags:
+                - tag: Application
+                  value: 'Informacoes do Fusor da Impressora'
+              trigger_prototypes:
+                - uuid: f6f67c2d5c2e450397166839481a855c
+                  expression: 'last(/Zabbix_Ultimate_Template_Contador_De_Paginas/vidafusor[{#SNMPVALUE}])<5'
+                  name: 'Vida Util do Fusor em {ITEM.VALUE} Troca Necessaria na {HOSTNAME}'
+                  status: DISABLED
+                  priority: INFO
+                  manual_close: 'YES'
+          graph_prototypes:
+            - uuid: 973a65a2aa7944ef8d231ae6ce52deb8
+              name: '13- Tempo de Vida do {#SNMPVALUE}'
+              graph_items:
+                - drawtype: FILLED_REGION
+                  color: 1A7C11
+                  item:
+                    host: Zabbix_Ultimate_Template_Contador_De_Paginas
+                    key: 'vidafusor[{#SNMPVALUE}]'
+        - uuid: 03e0dd6478534ae7b7ea4b4cce012e97
+          name: 'Descoberta LLD Unit Toner'
+          type: SNMP_AGENT
+          snmp_oid: 'discovery[{#SNMPVALUE},.1.3.6.1.2.1.43.11.1.1.6.1]'
+          key: prtMarkerSuppliesDescription
+          delay: '86400'
+          filter:
+            conditions:
+              - macro: '{#SNMPVALUE}'
+                value: '^Black Imaging Unit'
+                formulaid: A
+              - macro: '{#SNMPVALUE}'
+                value: '^Cyan Imaging Unit'
+                formulaid: B
+              - macro: '{#SNMPVALUE}'
+                value: '^Magenta Imaging Unit'
+                formulaid: C
+              - macro: '{#SNMPVALUE}'
+                value: '^Yellow Imaging Unit'
+                formulaid: D
+          lifetime: 1d
+          enabled_lifetime_type: DISABLE_NEVER
+          item_prototypes:
+            - uuid: b4b9a2fa2b034be8b525dd9778888ebd
+              name: 'Tipo de Classe da Unidade $1'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.2.1.43.11.1.1.4.1.{#SNMPINDEX}'
+              key: 'prtMarkerSuppliesClassUnit[{#SNMPVALUE}]'
+              delay: '600'
+              history: 7d
+              value_type: CHAR
+              trends: '0'
+              tags:
+                - tag: Application
+                  value: 'Informacoes da Classe da Unidade'
+            - uuid: 0fe2a40edd674bca81141270f1d95766
+              name: 'Descricao da Unidade'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.2.1.43.11.1.1.6.1.{#SNMPINDEX}'
+              key: 'prtMarkerSuppliesDescription[{#SNMPVALUE}]'
+              delay: '600'
+              history: 7d
+              value_type: CHAR
+              trends: '0'
+              tags:
+                - tag: Application
+                  value: 'Informacoes da Unidade'
+              trigger_prototypes:
+                - uuid: f9b4a31d1e1f469384516c2a8bd425d2
+                  expression: '(last(/Zabbix_Ultimate_Template_Contador_De_Paginas/prtMarkerSuppliesDescription[{#SNMPVALUE}],#1)<>last(/Zabbix_Ultimate_Template_Contador_De_Paginas/prtMarkerSuppliesDescription[{#SNMPVALUE}],#2))>0'
+                  name: 'A Unidade {ITEM.VALUE} Foi alterado na Impressora {HOSTNAME}'
+                  status: DISABLED
+                  priority: INFO
+                  manual_close: 'YES'
+            - uuid: e61b261be1db46f8b1bed00e2e484f61
+              name: 'Nivel de Capacidade da Unidade $1'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.2.1.43.11.1.1.9.1.{#SNMPINDEX}'
+              key: 'prtMarkerSuppliesLevel[{#SNMPVALUE}]'
+              delay: '600'
+              history: 7d
+              tags:
+                - tag: Application
+                  value: 'Informacoes de Nivel da unidade'
+            - uuid: 6cde0df7a18949f4b0225863405e2aa6
+              name: 'Maxima Capacidade da Unidade $1'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.2.1.43.11.1.1.8.1.{#SNMPINDEX}'
+              key: 'prtMarkerSuppliesMaxCapacity[{#SNMPVALUE}]'
+              delay: '600'
+              history: 7d
+              tags:
+                - tag: Application
+                  value: 'Informacoes da Capacidade Maxima da Unidade'
+            - uuid: 58f5f3edf530401eb94ae043c71840fe
+              name: 'Tipo de Suprimentos da Unidade $1'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.2.1.43.11.1.1.5.1.{#SNMPINDEX}'
+              key: 'prtMarkerSuppliesType[{#SNMPVALUE}]'
+              delay: '600'
+              history: 7d
+              value_type: CHAR
+              trends: '0'
+              tags:
+                - tag: Application
+                  value: 'Informacoes do Tipo da Unidade'
+            - uuid: dc11889a6da44b459cf78ecee622afc3
+              name: 'Nivel da Unidade $1 ( Porcentagem)'
+              type: CALCULATED
+              key: 'TempodeVidautilUnit[{#SNMPVALUE}]'
+              delay: '900'
+              history: 90d
+              units: '%'
+              params: '100*last(//prtMarkerSuppliesLevel[{#SNMPVALUE}])/last(//prtMarkerSuppliesMaxCapacity[{#SNMPVALUE}])'
+              tags:
+                - tag: Application
+                  value: 'Informacoes de Vida Util da Unidade'
+              trigger_prototypes:
+                - uuid: b13c868204a54fcfb47c5aa94039d588
+                  expression: 'last(/Zabbix_Ultimate_Template_Contador_De_Paginas/TempodeVidautilUnit[{#SNMPVALUE}])<5'
+                  name: 'Nivel do Toner {#SNMPVALUE} em {ITEM.VALUE}'
+                  status: DISABLED
+                  priority: WARNING
+                  manual_close: 'YES'
+        - uuid: da4bd6fbcee8420b9927ef4e0c4a0860
+          name: 'Descoberta LLD Toner Black'
+          type: SNMP_AGENT
+          snmp_oid: 'discovery[{#SNMPVALUE},.1.3.6.1.2.1.43.11.1.1.6.1]'
+          key: prtMarkerSuppliesDescriptionBlack
+          delay: '60'
+          filter:
+            conditions:
+              - macro: '{#SNMPVALUE}'
+                value: '^Black Toner'
+                formulaid: A
+          lifetime_type: DELETE_IMMEDIATELY
+          lifetime: '0'
+          item_prototypes:
+            - uuid: 97c260f7b1a945138b9da7992d75824f
+              name: 'Tipo de Tonalidade Relacionada ao $1'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.2.1.43.12.1.1.5.1.{#SNMPINDEX}'
+              key: 'prtMarkerColorantTonalityBlack[{#SNMPVALUE}]'
+              delay: '600'
+              history: 7d
+              value_type: CHAR
+              trends: '0'
+              tags:
+                - tag: Application
+                  value: 'Informacoes do Toner Black'
+            - uuid: e57ed0aa57ec4e9e9c632ee1b6e5511b
+              name: 'Tipo de Cor Relacionada ao $1'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.2.1.43.12.1.1.4.1.{#SNMPINDEX}'
+              key: 'prtMarkerColorantValueBlack[{#SNMPVALUE}]'
+              delay: '600'
+              history: 7d
+              value_type: CHAR
+              trends: '0'
+              tags:
+                - tag: Application
+                  value: 'Informacoes do Toner Black'
+            - uuid: 27b884ea5ca349ecaa7d59fbdfbebd18
+              name: 'Tipo de Classe do  $1'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.2.1.43.11.1.1.4.1.{#SNMPINDEX}'
+              key: 'prtMarkerSuppliesClassBlack[{#SNMPVALUE}]'
+              delay: '600'
+              history: 7d
+              value_type: CHAR
+              trends: '0'
+              tags:
+                - tag: Application
+                  value: 'Informacoes do Toner Black'
+            - uuid: 8b155f79cf0f461380af528af6409ff2
+              name: 'Descricao do Toner Black'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.2.1.43.11.1.1.6.1.{#SNMPINDEX}'
+              key: 'prtMarkerSuppliesDescriptionBlack[{#SNMPVALUE}]'
+              delay: '600'
+              history: 7d
+              value_type: CHAR
+              trends: '0'
+              tags:
+                - tag: Application
+                  value: 'Informacoes do Toner Black'
+              trigger_prototypes:
+                - uuid: 18474e2e4e95465c8593e9a9bd7bfb10
+                  expression: '(last(/Zabbix_Ultimate_Template_Contador_De_Paginas/prtMarkerSuppliesDescriptionBlack[{#SNMPVALUE}],#1)<>last(/Zabbix_Ultimate_Template_Contador_De_Paginas/prtMarkerSuppliesDescriptionBlack[{#SNMPVALUE}],#2))>0'
+                  name: 'O Toner {ITEM.VALUE} Foi alterado na {HOSTNAME}'
+                  status: DISABLED
+                  priority: INFO
+                  manual_close: 'YES'
+            - uuid: fd9281d85b0a4f1a9c44646537f48465
+              name: 'Nivel Capacidade de Suprimentos do  $1'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.2.1.43.11.1.1.9.1.{#SNMPINDEX}'
+              key: 'prtMarkerSuppliesLevelBlack[{#SNMPVALUE}]'
+              delay: '300'
+              history: 7d
+              tags:
+                - tag: Application
+                  value: 'Informacoes do Toner Black'
+            - uuid: 4ba33cb28bf9479cab2ad08b8008a72a
+              name: 'Maxima Capacidade de Suprimentos do $1'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.2.1.43.11.1.1.8.1.{#SNMPINDEX}'
+              key: 'prtMarkerSuppliesMaxCapacityBlack[{#SNMPVALUE}]'
+              delay: '600'
+              history: 7d
+              tags:
+                - tag: Application
+                  value: 'Informacoes do Toner Black'
+            - uuid: 16eb09d9d3ec40d9a773a883b7a01db3
+              name: 'Tipo de Suprimentos do $1'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.2.1.43.12.1.1.5.1.{#SNMPINDEX}'
+              key: 'prtMarkerSuppliesTypeBlack[{#SNMPVALUE}]'
+              delay: '600'
+              history: 7d
+              value_type: CHAR
+              trends: '0'
+              tags:
+                - tag: Application
+                  value: 'Informacoes do Toner Black'
+            - uuid: 02fee3e1f7784e758b0abe8ccb27ec77
+              name: 'Nivel do Toner Black ( Porcentagem)'
+              type: CALCULATED
+              key: 'totaltonerBlack[{#SNMPVALUE}]'
+              delay: '300'
+              history: 60d
+              trends: 90d
+              units: '%'
+              params: '100*last(//prtMarkerSuppliesLevelBlack[{#SNMPVALUE}])/last(//prtMarkerSuppliesMaxCapacityBlack[{#SNMPVALUE}])'
+              tags:
+                - tag: Application
+                  value: 'Informacoes do Toner Black'
+              trigger_prototypes:
+                - uuid: ccfcafbbfbdb444d8c5469c8c426fd9c
+                  expression: 'last(/Zabbix_Ultimate_Template_Contador_De_Paginas/totaltonerBlack[{#SNMPVALUE}])=1'
+                  name: 'Nivel do {#SNMPVALUE} em {ITEM.VALUE}'
+                  status: DISABLED
+                  priority: WARNING
+                  manual_close: 'YES'
+                - uuid: c4442eacd1624af18331f5d5e8dc878c
+                  expression: 'last(/Zabbix_Ultimate_Template_Contador_De_Paginas/totaltonerBlack[{#SNMPVALUE}])=2'
+                  name: 'Nivel do {#SNMPVALUE} em {ITEM.VALUE}'
+                  status: DISABLED
+                  priority: WARNING
+                  manual_close: 'YES'
+                - uuid: cd8891b05e51492a8c537b70aa20dbbd
+                  expression: 'last(/Zabbix_Ultimate_Template_Contador_De_Paginas/totaltonerBlack[{#SNMPVALUE}])=3'
+                  name: 'Nivel do {#SNMPVALUE} em {ITEM.VALUE}'
+                  status: DISABLED
+                  priority: WARNING
+                  manual_close: 'YES'
+                - uuid: 16d1905e90b94aeeaa9823bf54b4fec3
+                  expression: 'last(/Zabbix_Ultimate_Template_Contador_De_Paginas/totaltonerBlack[{#SNMPVALUE}])=4'
+                  name: 'Nivel do {#SNMPVALUE} em {ITEM.VALUE}'
+                  status: DISABLED
+                  priority: WARNING
+                  manual_close: 'YES'
+                - uuid: 3459a97a97004f4daeaa7d663ee303d6
+                  expression: 'last(/Zabbix_Ultimate_Template_Contador_De_Paginas/totaltonerBlack[{#SNMPVALUE}])=5'
+                  name: 'Nivel do {#SNMPVALUE} em {ITEM.VALUE}'
+                  status: DISABLED
+                  priority: WARNING
+                  manual_close: 'YES'
+                - uuid: 6dae0824918f443d80b4c803562441ca
+                  expression: 'last(/Zabbix_Ultimate_Template_Contador_De_Paginas/totaltonerBlack[{#SNMPVALUE}])=0'
+                  name: 'Troca Necessaria do {#SNMPVALUE} em {ITEM.VALUE}'
+                  status: DISABLED
+                  priority: HIGH
+                  manual_close: 'YES'
+          graph_prototypes:
+            - uuid: 3ad8edd9984041a093d20d8f22652a5f
+              name: '14- Nivel do {#SNMPVALUE}'
+              graph_items:
+                - drawtype: FILLED_REGION
+                  color: '000000'
+                  item:
+                    host: Zabbix_Ultimate_Template_Contador_De_Paginas
+                    key: 'totaltonerBlack[{#SNMPVALUE}]'
+        - uuid: 9fb24435f19e440893c258c8805e074b
+          name: 'Descoberta LLD Toner Cyan'
+          type: SNMP_AGENT
+          snmp_oid: 'discovery[{#SNMPVALUE},.1.3.6.1.2.1.43.11.1.1.6.1]'
+          key: prtMarkerSuppliesDescriptionCyan
+          delay: '60'
+          filter:
+            conditions:
+              - macro: '{#SNMPVALUE}'
+                value: '^Cyan Toner Cartridge'
+                formulaid: A
+          lifetime_type: DELETE_IMMEDIATELY
+          lifetime: '0'
+          item_prototypes:
+            - uuid: 85389b54c0424b23baec0f7beea0ad49
+              name: 'Tipo de Tonalidade Relacionada ao $1'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.2.1.43.12.1.1.5.1.{#SNMPINDEX}'
+              key: 'prtMarkerColorantTonalityCyan[{#SNMPVALUE}]'
+              delay: '600'
+              history: 90d
+              value_type: CHAR
+              trends: '0'
+              tags:
+                - tag: Application
+                  value: 'Informacoes do Toner Cyan'
+            - uuid: 189d1bcd6fa745c1bd8579e895645188
+              name: 'Tipo de Cor Relacionada ao $1'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.2.1.43.12.1.1.4.1.{#SNMPINDEX}'
+              key: 'prtMarkerColorantValueCyan[{#SNMPVALUE}]'
+              delay: '600'
+              history: 90d
+              value_type: CHAR
+              trends: '0'
+              tags:
+                - tag: Application
+                  value: 'Informacoes do Toner Cyan'
+            - uuid: 06dc9eee31b549d0b2a89c1e753ec2df
+              name: 'Tipo de Classe do  $1'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.2.1.43.11.1.1.4.1.{#SNMPINDEX}'
+              key: 'prtMarkerSuppliesClassCyan[{#SNMPVALUE}]'
+              delay: '600'
+              history: 90d
+              value_type: CHAR
+              trends: '0'
+              tags:
+                - tag: Application
+                  value: 'Informacoes do Toner Cyan'
+            - uuid: f886ee78cc7146158883e62735d50014
+              name: 'Descricao do Toner Cyan'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.2.1.43.11.1.1.6.1.{#SNMPINDEX}'
+              key: 'prtMarkerSuppliesDescriptionCyan[{#SNMPVALUE}]'
+              delay: '600'
+              history: 7d
+              value_type: CHAR
+              trends: '0'
+              tags:
+                - tag: Application
+                  value: 'Informacoes do Toner Cyan'
+              trigger_prototypes:
+                - uuid: b0c9efd7c7a84c6b8949bcf2adf87dfe
+                  expression: '(last(/Zabbix_Ultimate_Template_Contador_De_Paginas/prtMarkerSuppliesDescriptionCyan[{#SNMPVALUE}],#1)<>last(/Zabbix_Ultimate_Template_Contador_De_Paginas/prtMarkerSuppliesDescriptionCyan[{#SNMPVALUE}],#2))>0'
+                  name: 'O Toner {ITEM.VALUE} Foi alterado na Impressora {HOSTNAME}'
+                  status: DISABLED
+                  priority: INFO
+                  manual_close: 'YES'
+            - uuid: 69f9f30460464779bbde7b0b36895a8f
+              name: 'Nivel Capacidade de Suprimentos do  $1'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.2.1.43.11.1.1.9.1.{#SNMPINDEX}'
+              key: 'prtMarkerSuppliesLevelCyan[{#SNMPVALUE}]'
+              delay: '600'
+              history: 90d
+              tags:
+                - tag: Application
+                  value: 'Informacoes do Toner Cyan'
+            - uuid: 7fef04415d824c0cb26d64a066cf8325
+              name: 'Maxima Capacidade de Suprimentos do $1'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.2.1.43.11.1.1.8.1.{#SNMPINDEX}'
+              key: 'prtMarkerSuppliesMaxCapacityCyan[{#SNMPVALUE}]'
+              delay: '600'
+              history: 90d
+              tags:
+                - tag: Application
+                  value: 'Informacoes do Toner Cyan'
+            - uuid: df7ae093e7344e2baf23d6174202b4fe
+              name: 'Tipo de Suprimentos do $1'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.2.1.43.12.1.1.5.1.{#SNMPINDEX}'
+              key: 'prtMarkerSuppliesTypeCyan[{#SNMPVALUE}]'
+              delay: '600'
+              history: 900d
+              value_type: CHAR
+              trends: '0'
+              tags:
+                - tag: Application
+                  value: 'Informacoes do Toner Cyan'
+            - uuid: afe1d66641ec47e5b52f747f7981a918
+              name: 'Nivel do Toner Cyan ( Porcentagem)'
+              type: CALCULATED
+              key: 'totaltonerCyan[{#SNMPVALUE}]'
+              delay: '900'
+              history: 7d
+              units: '%'
+              params: '100*last(//prtMarkerSuppliesLevelCyan[{#SNMPVALUE}])/last(//prtMarkerSuppliesMaxCapacityCyan[{#SNMPVALUE}])'
+              tags:
+                - tag: Application
+                  value: 'Informacoes do Toner Cyan'
+              trigger_prototypes:
+                - uuid: 8f2e99473dea4aa7883a731e887bf508
+                  expression: 'last(/Zabbix_Ultimate_Template_Contador_De_Paginas/totaltonerCyan[{#SNMPVALUE}])=1'
+                  name: 'Nivel do Toner {#SNMPVALUE} em {ITEM.VALUE}'
+                  status: DISABLED
+                  priority: WARNING
+                  manual_close: 'YES'
+                - uuid: 837000ed0bd84c9abc08829c8c2c168d
+                  expression: 'last(/Zabbix_Ultimate_Template_Contador_De_Paginas/totaltonerCyan[{#SNMPVALUE}])=2'
+                  name: 'Nivel do Toner {#SNMPVALUE} em {ITEM.VALUE}'
+                  status: DISABLED
+                  priority: WARNING
+                  manual_close: 'YES'
+                - uuid: d6da619abe834334b9caf2f8e7413891
+                  expression: 'last(/Zabbix_Ultimate_Template_Contador_De_Paginas/totaltonerCyan[{#SNMPVALUE}])=3'
+                  name: 'Nivel do Toner {#SNMPVALUE} em {ITEM.VALUE}'
+                  status: DISABLED
+                  priority: WARNING
+                  manual_close: 'YES'
+                - uuid: e4fc73da12ed4cc7a42871f9934d9552
+                  expression: 'last(/Zabbix_Ultimate_Template_Contador_De_Paginas/totaltonerCyan[{#SNMPVALUE}])=4'
+                  name: 'Nivel do Toner {#SNMPVALUE} em {ITEM.VALUE}'
+                  status: DISABLED
+                  priority: WARNING
+                  manual_close: 'YES'
+                - uuid: b8fa5e1aa0f74a57b3c6cffd2c4694ec
+                  expression: 'last(/Zabbix_Ultimate_Template_Contador_De_Paginas/totaltonerCyan[{#SNMPVALUE}])=5'
+                  name: 'Nivel do Toner {#SNMPVALUE} em {ITEM.VALUE}'
+                  status: DISABLED
+                  priority: WARNING
+                  manual_close: 'YES'
+                - uuid: 7013caf401894c6d82ff3c1741d4e825
+                  expression: 'last(/Zabbix_Ultimate_Template_Contador_De_Paginas/totaltonerCyan[{#SNMPVALUE}])=0'
+                  name: 'Troca Necessaria do {#SNMPVALUE} em {ITEM.VALUE}'
+                  status: DISABLED
+                  priority: HIGH
+                  manual_close: 'YES'
+          graph_prototypes:
+            - uuid: 07ff3d21dc684691bb17b53ece52a40c
+              name: '15- Nivel do {#SNMPVALUE}'
+              graph_items:
+                - drawtype: FILLED_REGION
+                  color: 00FFFF
+                  item:
+                    host: Zabbix_Ultimate_Template_Contador_De_Paginas
+                    key: 'totaltonerCyan[{#SNMPVALUE}]'
+        - uuid: 9b3a900f23654a269876b90fc6c879b1
+          name: 'Descoberta LLD Toner Magenta'
+          type: SNMP_AGENT
+          snmp_oid: 'discovery[{#SNMPVALUE},.1.3.6.1.2.1.43.11.1.1.6.1]'
+          key: prtMarkerSuppliesDescriptionMagenta
+          delay: '60'
+          filter:
+            conditions:
+              - macro: '{#SNMPVALUE}'
+                value: '^Magenta Toner Cartridge'
+                formulaid: A
+          lifetime_type: DELETE_IMMEDIATELY
+          lifetime: '0'
+          item_prototypes:
+            - uuid: 006679edcd4d450f965aef2b2a23704d
+              name: 'Tipo de Tonalidade Relacionada ao $1'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.2.1.43.12.1.1.5.1.{#SNMPINDEX}'
+              key: 'prtMarkerColorantTonalityMagenta[{#SNMPVALUE}]'
+              delay: '600'
+              history: 90d
+              value_type: CHAR
+              trends: '0'
+              tags:
+                - tag: Application
+                  value: 'Informacoes do Toner Magenta'
+            - uuid: 8564d14a83264801acece623c33d2f64
+              name: 'Tipo de Cor Relacionada ao $1'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.2.1.43.12.1.1.4.1.{#SNMPINDEX}'
+              key: 'prtMarkerColorantValueMagenta[{#SNMPVALUE}]'
+              delay: '600'
+              history: 90d
+              value_type: CHAR
+              trends: '0'
+              tags:
+                - tag: Application
+                  value: 'Informacoes do Toner Magenta'
+            - uuid: 9398a110e2be4d5c86f46aa32070f6ce
+              name: 'Tipo de Classe do  $1'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.2.1.43.11.1.1.4.1.{#SNMPINDEX}'
+              key: 'prtMarkerSuppliesClassMagenta[{#SNMPVALUE}]'
+              delay: '600'
+              history: 90d
+              value_type: CHAR
+              trends: '0'
+              tags:
+                - tag: Application
+                  value: 'Informacoes do Toner Magenta'
+            - uuid: c5a030b2acc04ee6952de2ae8d1e8fc3
+              name: 'Descricao do Toner Magenta'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.2.1.43.11.1.1.6.1.{#SNMPINDEX}'
+              key: 'prtMarkerSuppliesDescriptionMagenta[{#SNMPVALUE}]'
+              delay: '600'
+              history: 90d
+              value_type: CHAR
+              trends: '0'
+              tags:
+                - tag: Application
+                  value: 'Informacoes do Toner Magenta'
+              trigger_prototypes:
+                - uuid: 8142922587c44fb9a817ee5468bb4e5f
+                  expression: '(last(/Zabbix_Ultimate_Template_Contador_De_Paginas/prtMarkerSuppliesDescriptionMagenta[{#SNMPVALUE}],#1)<>last(/Zabbix_Ultimate_Template_Contador_De_Paginas/prtMarkerSuppliesDescriptionMagenta[{#SNMPVALUE}],#2))>0'
+                  name: 'O Toner {ITEM.VALUE} Foi alterado na Impressora {HOSTNAME}'
+                  status: DISABLED
+                  priority: INFO
+                  manual_close: 'YES'
+            - uuid: dfdf776041954c65a0dc3ffe65c21f12
+              name: 'Nivel Capacidade de Suprimentos do  $1'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.2.1.43.11.1.1.9.1.{#SNMPINDEX}'
+              key: 'prtMarkerSuppliesLevelMagenta[{#SNMPVALUE}]'
+              delay: '600'
+              history: 90d
+              tags:
+                - tag: Application
+                  value: 'Informacoes do Toner Magenta'
+            - uuid: 8d9772beee4e47a2af98aa6f77e55518
+              name: 'Maxima Capacidade de Suprimentos do $1'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.2.1.43.11.1.1.8.1.{#SNMPINDEX}'
+              key: 'prtMarkerSuppliesMaxCapacityMagenta[{#SNMPVALUE}]'
+              delay: '600'
+              history: 90d
+              tags:
+                - tag: Application
+                  value: 'Informacoes do Toner Magenta'
+            - uuid: 05d5ecd6269a4652a24daf71c1fe4ce6
+              name: 'Tipo de Suprimentos do $1'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.2.1.43.12.1.1.5.1.{#SNMPINDEX}'
+              key: 'prtMarkerSuppliesTypeMagenta[{#SNMPVALUE}]'
+              delay: '600'
+              history: 90d
+              value_type: CHAR
+              trends: '0'
+              tags:
+                - tag: Application
+                  value: 'Informacoes do Toner Magenta'
+            - uuid: 2c85df488492431fac84ff4159058aed
+              name: 'Nivel do Toner Magenta ( Porcentagem)'
+              type: CALCULATED
+              key: 'totaltonerMagenta[{#SNMPVALUE}]'
+              delay: '900'
+              history: 7d
+              units: '%'
+              params: '100*last(//prtMarkerSuppliesLevelMagenta[{#SNMPVALUE}])/last(//prtMarkerSuppliesMaxCapacityMagenta[{#SNMPVALUE}])'
+              tags:
+                - tag: Application
+                  value: 'Informacoes do Toner Magenta'
+              trigger_prototypes:
+                - uuid: dd467e5aa6cd4925838b2b87b2091793
+                  expression: 'last(/Zabbix_Ultimate_Template_Contador_De_Paginas/totaltonerMagenta[{#SNMPVALUE}])=1'
+                  name: 'Nivel do Toner {#SNMPVALUE} em {ITEM.VALUE}'
+                  status: DISABLED
+                  priority: WARNING
+                  manual_close: 'YES'
+                - uuid: bfd246b26ed1424b863c8f75307dd536
+                  expression: 'last(/Zabbix_Ultimate_Template_Contador_De_Paginas/totaltonerMagenta[{#SNMPVALUE}])=2'
+                  name: 'Nivel do Toner {#SNMPVALUE} em {ITEM.VALUE}'
+                  status: DISABLED
+                  priority: WARNING
+                  manual_close: 'YES'
+                - uuid: 644f1d564087433b809a6e2be3713185
+                  expression: 'last(/Zabbix_Ultimate_Template_Contador_De_Paginas/totaltonerMagenta[{#SNMPVALUE}])=3'
+                  name: 'Nivel do Toner {#SNMPVALUE} em {ITEM.VALUE}'
+                  status: DISABLED
+                  priority: WARNING
+                  manual_close: 'YES'
+                - uuid: ebf99e82227c4531b06c3c02c28375ad
+                  expression: 'last(/Zabbix_Ultimate_Template_Contador_De_Paginas/totaltonerMagenta[{#SNMPVALUE}])=4'
+                  name: 'Nivel do Toner {#SNMPVALUE} em {ITEM.VALUE}'
+                  status: DISABLED
+                  priority: WARNING
+                  manual_close: 'YES'
+                - uuid: 1fbcb3626a614ecfbc459ad7d36b24ac
+                  expression: 'last(/Zabbix_Ultimate_Template_Contador_De_Paginas/totaltonerMagenta[{#SNMPVALUE}])=5'
+                  name: 'Nivel do Toner {#SNMPVALUE} em {ITEM.VALUE}'
+                  status: DISABLED
+                  priority: WARNING
+                  manual_close: 'YES'
+                - uuid: 855b03fc243748579cf479bb831291c7
+                  expression: 'last(/Zabbix_Ultimate_Template_Contador_De_Paginas/totaltonerMagenta[{#SNMPVALUE}])=0'
+                  name: 'Troca Necessaria do {#SNMPVALUE} em {ITEM.VALUE}'
+                  status: DISABLED
+                  priority: HIGH
+                  manual_close: 'YES'
+          graph_prototypes:
+            - uuid: 234a335521e743189a284e5e339d8d03
+              name: '16- Nivel do {#SNMPVALUE}'
+              graph_items:
+                - drawtype: FILLED_REGION
+                  color: FF00FF
+                  item:
+                    host: Zabbix_Ultimate_Template_Contador_De_Paginas
+                    key: 'totaltonerMagenta[{#SNMPVALUE}]'
+        - uuid: 05b8bfe1a318464e9eceb4a5373c4338
+          name: 'Descoberta LLD Unidade de Transferencia'
+          type: SNMP_AGENT
+          snmp_oid: 'discovery[{#SNMPVALUE},.1.3.6.1.2.1.43.11.1.1.6.1]'
+          key: prtMarkerSuppliesDescriptionTransfer
+          delay: '86400'
+          filter:
+            conditions:
+              - macro: '{#SNMPVALUE}'
+                value: ^Transfer
+                formulaid: A
+          lifetime_type: DELETE_IMMEDIATELY
+          lifetime: '0'
+          item_prototypes:
+            - uuid: 434a73907a3d4adb83de1ba07bebd27c
+              name: 'Descricao da Unidade de Transferencia'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.2.1.43.11.1.1.6.1.{#SNMPINDEX}'
+              key: 'prtMarkerTransferDescription[{#SNMPVALUE}]'
+              delay: '600'
+              history: 90d
+              value_type: CHAR
+              trends: '0'
+              tags:
+                - tag: Application
+                  value: 'Informacoes da Unidade de Transferencia'
+            - uuid: 3847064b88e445379eae91364d96dfe4
+              name: 'Nivel de Capacidade da Unidade de Transferencia ( $1 )'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.2.1.43.11.1.1.9.1.{#SNMPINDEX}'
+              key: 'prtMarkerTransferLevel[{#SNMPVALUE}]'
+              delay: '600'
+              history: 90d
+              value_type: CHAR
+              trends: '0'
+              tags:
+                - tag: Application
+                  value: 'Informacoes da Unidade de Transferencia'
+            - uuid: 5788ef05170a499ab242d9f8301742c7
+              name: 'Maxima Capacidade da Unidade de Transferencia ( $1 )'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.2.1.43.11.1.1.8.1.{#SNMPINDEX}'
+              key: 'prtMarkerTransferMaxCapacity[{#SNMPVALUE}]'
+              delay: '600'
+              history: 90d
+              value_type: CHAR
+              trends: '0'
+              tags:
+                - tag: Application
+                  value: 'Informacoes da Unidade de Transferencia'
+            - uuid: 6bdbdf31af694ea696f8ee12bd70f7d3
+              name: 'Tempo de Vida da Unidade de Transferencia ( Impressoes) ( $1 )'
+              type: CALCULATED
+              key: 'vidaTransferImpressoesRealizadas[{#SNMPVALUE}]'
+              delay: '600'
+              history: 7d
+              params: 'last(//prtMarkerTransferMaxCapacity[{#SNMPVALUE}])-last(//prtMarkerTransferLevel[{#SNMPVALUE}])'
+              tags:
+                - tag: Application
+                  value: 'Informacoes da Unidade de Transferencia'
+            - uuid: c2231ba209eb40849f82429e62e849bf
+              name: 'Tempo de Vida Restante na Unidade de Transferencia ( $1 )'
+              type: CALCULATED
+              key: 'vidaTransferImpressoes[{#SNMPVALUE}]'
+              delay: '600'
+              history: 7d
+              units: '%'
+              params: '100*last(//prtMarkerTransferLevel[{#SNMPVALUE}])/last(//prtMarkerTransferMaxCapacity[{#SNMPVALUE}])'
+              tags:
+                - tag: Application
+                  value: 'Informacoes da Unidade de Transferencia'
+              trigger_prototypes:
+                - uuid: 2f8de2e943924f68bd22c0284d864531
+                  expression: 'last(/Zabbix_Ultimate_Template_Contador_De_Paginas/vidaTransferImpressoes[{#SNMPVALUE}])<5'
+                  name: 'Troca da Unidade de Transferencia Necessaria na Impressora {HOSTNAME}'
+                  status: DISABLED
+                  priority: INFO
+                  manual_close: 'YES'
+        - uuid: 16139ce8541d4813bc4d76483dc6b946
+          name: 'Descoberta LLD Toner Yellow'
+          type: SNMP_AGENT
+          snmp_oid: 'discovery[{#SNMPVALUE},.1.3.6.1.2.1.43.11.1.1.6.1]'
+          key: prtMarkerSuppliesDescriptionYellow
+          delay: '60'
+          filter:
+            conditions:
+              - macro: '{#SNMPVALUE}'
+                value: '^Yellow Toner Cartridge'
+                formulaid: A
+          lifetime_type: DELETE_IMMEDIATELY
+          lifetime: '0'
+          item_prototypes:
+            - uuid: a42c8efcaf7547dfb65b4a009c35dcd1
+              name: 'Tipo de Tonalidade Relacionada ao $1'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.2.1.43.12.1.1.5.1.{#SNMPINDEX}'
+              key: 'prtMarkerColorantTonalityYellow[{#SNMPVALUE}]'
+              delay: '600'
+              history: 90d
+              value_type: CHAR
+              trends: '0'
+              tags:
+                - tag: Application
+                  value: 'Informacoes do Toner Yellow'
+            - uuid: 7e748317784b4dad818ac6e1b16a5486
+              name: 'Tipo de Cor Relacionada ao $1'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.2.1.43.12.1.1.4.1.{#SNMPINDEX}'
+              key: 'prtMarkerColorantValueYellow[{#SNMPVALUE}]'
+              delay: '600'
+              history: 90d
+              value_type: CHAR
+              trends: '0'
+              tags:
+                - tag: Application
+                  value: 'Informacoes do Toner Yellow'
+            - uuid: 8168873b0cfc4816941ffe9910d2ab18
+              name: 'Tipo de Classe do  $1'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.2.1.43.11.1.1.4.1.{#SNMPINDEX}'
+              key: 'prtMarkerSuppliesClassYellow[{#SNMPVALUE}]'
+              delay: '600'
+              history: 90d
+              value_type: CHAR
+              trends: '0'
+              tags:
+                - tag: Application
+                  value: 'Informacoes do Toner Yellow'
+            - uuid: ee7194327ff247f09c438d3d7d00badc
+              name: 'Descricao do Toner Yellow'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.2.1.43.11.1.1.6.1.{#SNMPINDEX}'
+              key: 'prtMarkerSuppliesDescriptionYellow[{#SNMPVALUE}]'
+              delay: '600'
+              history: 90d
+              value_type: CHAR
+              trends: '0'
+              tags:
+                - tag: Application
+                  value: 'Informacoes do Toner Yellow'
+              trigger_prototypes:
+                - uuid: 6e458c8fdb2943c7907c4ca80b82b5c3
+                  expression: '(last(/Zabbix_Ultimate_Template_Contador_De_Paginas/prtMarkerSuppliesDescriptionYellow[{#SNMPVALUE}],#1)<>last(/Zabbix_Ultimate_Template_Contador_De_Paginas/prtMarkerSuppliesDescriptionYellow[{#SNMPVALUE}],#2))>0'
+                  name: 'O Toner {ITEM.VALUE} Foi alterado na Impressora {HOSTNAME}'
+                  status: DISABLED
+                  priority: INFO
+                  manual_close: 'YES'
+            - uuid: 458e70ecaa594be682efc47885c46c8e
+              name: 'Nivel Capacidade de Suprimentos do  $1'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.2.1.43.11.1.1.9.1.{#SNMPINDEX}'
+              key: 'prtMarkerSuppliesLevelYellow[{#SNMPVALUE}]'
+              delay: '600'
+              history: 90d
+              tags:
+                - tag: Application
+                  value: 'Informacoes do Toner Yellow'
+            - uuid: f0f18c54c0c34cb995a3b9d8593bff68
+              name: 'Maxima Capacidade de Suprimentos do $1'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.2.1.43.11.1.1.8.1.{#SNMPINDEX}'
+              key: 'prtMarkerSuppliesMaxCapacityYellow[{#SNMPVALUE}]'
+              delay: '600'
+              history: 7d
+              tags:
+                - tag: Application
+                  value: 'Informacoes do Toner Yellow'
+            - uuid: 2553b58b39b54fd2bf856feab4de57bf
+              name: 'Tipo de Suprimentos do $1'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.2.1.43.12.1.1.5.1.{#SNMPINDEX}'
+              key: 'prtMarkerSuppliesTypeYellow[{#SNMPVALUE}]'
+              delay: '600'
+              history: 90d
+              value_type: CHAR
+              trends: '0'
+              tags:
+                - tag: Application
+                  value: 'Informacoes do Toner Yellow'
+            - uuid: dbe2e02284ed4c41b8b4ec57e14fa35a
+              name: 'Nivel do Toner Yellow ( Porcentagem)'
+              type: CALCULATED
+              key: 'totaltonerYellow[{#SNMPVALUE}]'
+              delay: '900'
+              history: 7d
+              units: '%'
+              params: '100*last(//prtMarkerSuppliesLevelYellow[{#SNMPVALUE}])/last(//prtMarkerSuppliesMaxCapacityYellow[{#SNMPVALUE}])'
+              tags:
+                - tag: Application
+                  value: 'Informacoes do Toner Yellow'
+              trigger_prototypes:
+                - uuid: 95c94148ac5f4a439805f5c802ba29d7
+                  expression: 'last(/Zabbix_Ultimate_Template_Contador_De_Paginas/totaltonerYellow[{#SNMPVALUE}])=1'
+                  name: 'Nivel do Toner {#SNMPVALUE} em {ITEM.VALUE}'
+                  status: DISABLED
+                  priority: WARNING
+                  manual_close: 'YES'
+                - uuid: 81198ed5abc3453eb8eb35eb1588895d
+                  expression: 'last(/Zabbix_Ultimate_Template_Contador_De_Paginas/totaltonerYellow[{#SNMPVALUE}])=2'
+                  name: 'Nivel do Toner {#SNMPVALUE} em {ITEM.VALUE}'
+                  status: DISABLED
+                  priority: WARNING
+                  manual_close: 'YES'
+                - uuid: e23366fafc6840bb84759c192339fdb4
+                  expression: 'last(/Zabbix_Ultimate_Template_Contador_De_Paginas/totaltonerYellow[{#SNMPVALUE}])=3'
+                  name: 'Nivel do Toner {#SNMPVALUE} em {ITEM.VALUE}'
+                  status: DISABLED
+                  priority: WARNING
+                  manual_close: 'YES'
+                - uuid: bcff6d6e56c44a339e4416a7acdb5668
+                  expression: 'last(/Zabbix_Ultimate_Template_Contador_De_Paginas/totaltonerYellow[{#SNMPVALUE}])=4'
+                  name: 'Nivel do Toner {#SNMPVALUE} em {ITEM.VALUE}'
+                  status: DISABLED
+                  priority: WARNING
+                  manual_close: 'YES'
+                - uuid: 370a83e7a4774c518ad00d8fb0d8d3c5
+                  expression: 'last(/Zabbix_Ultimate_Template_Contador_De_Paginas/totaltonerYellow[{#SNMPVALUE}])=5'
+                  name: 'Nivel do Toner {#SNMPVALUE} em {ITEM.VALUE}'
+                  status: DISABLED
+                  priority: WARNING
+                  manual_close: 'YES'
+                - uuid: 72fd25b8060140e18851aaa2f38f73c2
+                  expression: 'last(/Zabbix_Ultimate_Template_Contador_De_Paginas/totaltonerYellow[{#SNMPVALUE}])=0'
+                  name: 'Troca Necessaria do {#SNMPVALUE} em {ITEM.VALUE}'
+                  status: DISABLED
+                  priority: HIGH
+                  manual_close: 'YES'
+          graph_prototypes:
+            - uuid: ffdd166fa0da433085ca1007b05b9b50
+              name: '17- Nivel do {#SNMPVALUE}'
+              graph_items:
+                - drawtype: FILLED_REGION
+                  color: FFFF00
+                  item:
+                    host: Zabbix_Ultimate_Template_Contador_De_Paginas
+                    key: 'totaltonerYellow[{#SNMPVALUE}]'
+        - uuid: 0254f8a70aed49b0a64d3b8b1ff1f77f
+          name: 'Descoberta LLD Informacoes do Hardware'
+          type: SNMP_AGENT
+          snmp_oid: 'discovery[{#SNMPVALUE},.1.3.6.1.2.1.1.1]'
+          key: sysDescr
+          delay: '86400'
+          lifetime_type: DELETE_IMMEDIATELY
+          lifetime: '0'
+          item_prototypes:
+            - uuid: 2bd1b1918964452d8eb8192a124034be
+              name: 'Numero de Serie do Equipamento'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.2.1.43.5.1.1.17.{#SNMPINDEX}'
+              key: 'prtGeneralSerialNumber[{#SNMPVALUE}]'
+              delay: '600'
+              history: 90d
+              value_type: CHAR
+              trends: '0'
+              tags:
+                - tag: Application
+                  value: 'Informacoes do Equipamento'
+            - uuid: a645fd7d80ff41c69be9c09f2d630775
+              name: 'Informacao de Contato do Equipamento'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.2.1.1.4.{#SNMPINDEX}'
+              key: 'sysContact[{#SNMPVALUE}]'
+              delay: '600'
+              history: 90d
+              value_type: CHAR
+              trends: '0'
+              tags:
+                - tag: Application
+                  value: 'Informacoes do Equipamento'
+            - uuid: 3c33314deaee4bdbb6109dcf15376494
+              name: 'Descricao do Equipamento'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.2.1.1.1.{#SNMPINDEX}'
+              key: 'sysDescr[{#SNMPVALUE}]'
+              delay: '600'
+              history: 90d
+              value_type: CHAR
+              trends: '0'
+              tags:
+                - tag: Application
+                  value: 'Informacoes do Equipamento'
+            - uuid: 374fbb78a7064ec1b73c7625286e98e1
+              name: 'Localizacao do Equipamento'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.2.1.1.6.{#SNMPINDEX}'
+              key: 'sysLocation[{#SNMPVALUE}]'
+              delay: '600'
+              history: 90d
+              value_type: CHAR
+              trends: '0'
+              tags:
+                - tag: Application
+                  value: 'Informacoes do Equipamento'
+            - uuid: 2b8b16ebd85f4c8882b38ee784fb050f
+              name: 'Hostname do Equipamento'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.2.1.1.5.{#SNMPINDEX}'
+              key: 'sysName[{#SNMPVALUE}]'
+              delay: '600'
+              history: 90d
+              value_type: CHAR
+              trends: '0'
+              tags:
+                - tag: Application
+                  value: 'Informacoes do Equipamento'
+            - uuid: 8e8b7b133b40430f972e456c8fc48e8a
+              name: 'Quantidade de Servico'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.2.1.1.7.{#SNMPINDEX}'
+              key: 'sysServices[{#SNMPVALUE}]'
+              delay: '600'
+              history: 90d
+              tags:
+                - tag: Application
+                  value: 'Informacoes do Equipamento'
+      valuemaps:
+        - uuid: 86de1028abe944e2a771d2ab46e5f85a
+          name: 'SNMP interface status (ifAdminStatus)'
+          mappings:
+            - value: '1'
+              newvalue: up
+            - value: '2'
+              newvalue: down
+            - value: '3'
+              newvalue: testing
+  graphs:
+    - uuid: 9bb8d41b54e34d3184f60d3d73c40c2b
+      name: '01- Disponibilidade'
+      graph_items:
+        - drawtype: FILLED_REGION
+          color: 1A7C11
+          item:
+            host: Zabbix_Ultimate_Template_Contador_De_Paginas
+            key: icmpping
+    - uuid: a6c0265bd95845db841d12bdc5bc28f3
+      name: '02- Latencia'
+      graph_items:
+        - drawtype: FILLED_REGION
+          color: 1A7C11
+          item:
+            host: Zabbix_Ultimate_Template_Contador_De_Paginas
+            key: icmppingsec
+    - uuid: fe59c2d5d8634462b1a4e40fb4688715
+      name: '03- Perda de Pacote ( Porcentagem )'
+      graph_items:
+        - drawtype: FILLED_REGION
+          color: 1A7C11
+          item:
+            host: Zabbix_Ultimate_Template_Contador_De_Paginas
+            key: icmppingloss
+    - uuid: 966f60eee6c44fb69c85acb002619bcc
+      name: '04- Tempo Ligado do Equipamento'
+      graph_items:
+        - drawtype: FILLED_REGION
+          color: 1A7C11
+          item:
+            host: Zabbix_Ultimate_Template_Contador_De_Paginas
+            key: sysUpTimeInstance
+    - uuid: 92e7c530b7b940f19db2fc688b3cb474
+      name: '05- Paginas Impressas Total'
+      graph_items:
+        - drawtype: FILLED_REGION
+          color: 1A7C11
+          item:
+            host: Zabbix_Ultimate_Template_Contador_De_Paginas
+            key: impressoes_mes_02
+    - uuid: 37f90935cfa1492cad19625b81a4e66f
+      name: '06- Paginas Impressas Por Dia'
+      graph_items:
+        - drawtype: FILLED_REGION
+          color: 1A7C11
+          item:
+            host: Zabbix_Ultimate_Template_Contador_De_Paginas
+            key: impressoes_mes
+    - uuid: 95a01e60121b40e98ec6bfb56c95cea0
+      name: '07- Paginas Impressas Por Semana'
+      graph_items:
+        - drawtype: FILLED_REGION
+          color: 1A7C11
+          item:
+            host: Zabbix_Ultimate_Template_Contador_De_Paginas
+            key: impressoes_semana
+    - uuid: 03c2c4abdc8c4ae9b8e89bb4377d4232
+      name: '08- Paginas Impressas Por Mes'
+      graph_items:
+        - drawtype: FILLED_REGION
+          color: 1A7C11
+          item:
+            host: Zabbix_Ultimate_Template_Contador_De_Paginas
+            key: impressoes_mes_01
+    - uuid: 6c84ab819af44958b6086d0301499669
+      name: '09- Custo Total ao Mes'
+      graph_items:
+        - drawtype: FILLED_REGION
+          color: 1A7C11
+          item:
+            host: Zabbix_Ultimate_Template_Contador_De_Paginas
+            key: valor_impressoes_mes
