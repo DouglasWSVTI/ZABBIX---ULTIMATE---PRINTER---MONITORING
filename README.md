@@ -129,7 +129,7 @@ Compatibilidade:
 
 ## 📁 Estrutura do projeto
 
-
+```text
 .
 ├── docs/
 │   └── Documentação e informações técnicas do projeto
